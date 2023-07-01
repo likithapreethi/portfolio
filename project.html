@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinni Likitha Preethi Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+  <style>
+    .info-popup {
+      display: none;
+      position: absolute;
+      background-color:rgb(18,18,62);
+      color:white;
+      padding: 10px;
+      width: 500px;
+      height: 230px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .image-container {
+      position: relative;
+      display: inline-block;
+      padding: 50px;
+    }
+    .image-container h2{
+      padding-left:30px ;
+      color:#12d640;
+    }
+    .image-container ul li{
+      padding-left:30px;
+      padding-top: 10px;
+      list-style-type: none;
+      
+    }
+    .image-container ul li a{
+      color: #12d640;
+      
+    }
+    .image-container p{
+      padding-left:30px ;
+    }
+
+    .info-symbol {
+      position: absolute;
+      top: 50px;
+      right:50px;
+      background-color: #999;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align:center;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .heading1 {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+ 
+  </style>
+
+<body>
+  <header>
+    <nav>
+        <div class="left">Pinni Likitha Preethi Portfolio </div>
+        <div class="right">
+            <ul>
+                <li><a href="/">HOME</a></li>
+              <li><a href="/about.html">ABOUT</a></li>
+              <li><a href="/education.html">EDUCATION</a></li>
+              <li><a href="/project.html">PROJECTS</a></li>
+              <li><a href="/skills.html">SKILLS</a></li>
+              <li><a href="/contact.html">CONTACT ME</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+</header>
+<h1></h1>
+  <main>
+  <div class="image-container">
+    <img src="portfolio.png" alt="Image 1" width="300" height="200" style="top: 50px ;padding-left:100px ;align-items: center;">
+    <h2 class="heading1">MY PORTFOLIO</h2>
+    <div class="info-popup">
+      <span class="close-button">&times;</span>
+
+      <h2>My Portfolio</h2>
+      <ul>
+        <li>
+          <strong>My portfolio :</strong> HTML, CSS,Java script
+        </li>
+        <li>
+          <strong>Project Link:</strong> <a href="https://project1.com">Link</a>
+        </li>
+        <li>
+          <strong>GitHub Link:</strong> <a href="https://github.com/user/project1">Project Link</a>
+        </li>
+      </ul>
+      <p>The website is created using HTML, CSS,Java script.</p>
+      <p>This website is for sharing my portfoilo in a smart way, it definetly impressive and creative way for sharing your profile.</p>
+    </div>
+    <div class="info-symbol">i</div>
+  </div>
+  
+  <div class="image-container" style="padding: 50px;">
+   
+    <img src="telegram.png" alt="Image 2" width="300" height="200" style="">
+    <h2 class="heading1">TELEGRAM CHAT BOT</h2>
+    <div class="info-popup">
+      <span class="close-button">&times;</span>
+       
+      <h2>TELIGRAM CHAT BOT</h2>
+      <ul>
+        <li>
+          <strong>Teligram chatbot:</strong>node.js,database
+        </li>
+        <li>
+          <strong>Project Link:</strong> <a href="https://project2.com">Link</a>
+        </li>
+        <li>
+          <strong>GitHub Link:</strong> <a href="https://github.com/user/project2">project link</a>
+        </li>
+      </ul>
+      <p>the project is to record no.of festivals present in a month
+        and to give information about one particular festival by just
+        giving name of the festival through node.js and database</p>
+    </div>
+    <div class="info-symbol">i</div>
+  </div>
+  
+  <script>
+    const imageContainers = document.querySelectorAll('.image-container');
+    imageContainers.forEach(container => {
+      const infoSymbol = container.querySelector('.info-symbol');
+      const infoPopup = container.querySelector('.info-popup');
+      
+      infoSymbol.addEventListener('click', () => {
+        infoPopup.style.display = 'block';
+      });
+      
+      container.addEventListener('mouseleave', () => {
+        infoPopup.style.display = 'none';
+      });
+    });
+  </script>
+  </main>
+</body>
+</html>
